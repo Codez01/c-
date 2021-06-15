@@ -38,6 +38,7 @@ sim_mem::sim_mem(char exe_file_name[], char swap_file_name[], int text_size, int
     program_fd = open(exe_file_name, O_RDWR);
     if (program_fd == -1) {
         perror("error while loading file");
+        this->sim_mem::~sim_mem();
         exit(1);
     }
 
@@ -993,6 +994,10 @@ sim_mem::~sim_mem() {
     delete(page_table);
     close(program_fd);
     close(swapfile_fd);
+    delete(SwapArray);
+    delete(SwapArray_checker);
+    
+
 
 }
 
