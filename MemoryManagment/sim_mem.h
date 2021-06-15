@@ -2,7 +2,7 @@
 
 #ifndef sim_mem_h
 #define sim_mem_h
-#define MEMORY_SIZE 100
+#define MEMORY_SIZE 25
 char main_memory[MEMORY_SIZE];
 using namespace  std;
 typedef struct page_descriptor
