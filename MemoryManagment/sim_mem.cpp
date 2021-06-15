@@ -13,7 +13,7 @@
 #include <string>
 
 using namespace std;
-#define MEMORY_SIZE 100
+
 queue < int > Q;
 queue < int > Q_Checker;
 int * SwapArray_checker;
@@ -236,7 +236,7 @@ char sim_mem::load(int address) { // method that loads a specific page in the ma
 
             page_table[PageNumber].V = 1; //the place becomes valid
             Q_Checker.push(1); //incrementing the size of Q_checker Queue
-            cout << "the frame " << frame << endl;
+
             page_table[PageNumber].frame = frame;
 
             return main_memory[physicalAddress]; // return
@@ -996,7 +996,7 @@ sim_mem::~sim_mem() {
     close(swapfile_fd);
     delete(SwapArray);
     delete(SwapArray_checker);
-    
+
 
 
 }
